@@ -1,0 +1,282 @@
+body {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15vh;
+    background-color: rgb(245, 245, 245);
+}
+
+textarea {
+    resize: none;
+    width: 90%;
+    height: 200px;
+    border: 3px solid #CC6699;
+    border-radius: 0px 0px 0px 0px;
+    margin-top: 0px;
+    /* background-color: rgb(250, 250, 250); */
+    box-shadow: 0 0 3px rgb(125, 124, 124) inset;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #009966;
+    animation: border-color-trans 0.25s linear 1;
+}
+
+.with-label:focus-within>.label {
+    border-color: #009966;
+    background-color: #009966;
+    animation: back-color-trans 0.25s linear 1;
+}
+
+@keyframes border-color-trans {
+    0% {
+        border-color: #CC6699;
+    }
+    50% {
+        border-color: #65807F;
+    }
+    100% {
+        border-color: #009966;
+    }
+}
+
+@keyframes back-color-trans {
+    0% {
+        border-color: #CC6699;
+        background-color: #CC6699;
+    }
+    50% {
+        border-color: #65807F;
+        background-color: #65807F;
+    }
+    100% {
+        border-color: #009966;
+        background-color: #009966;
+    }
+}
+
+.main-text {
+    margin: 0;
+    pad: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input-body {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+#btn-bar {
+    margin: 0;
+    pad: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-between;
+}
+
+#btn-bar>button {
+    width: 40%;
+}
+
+
+/* form {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form>button {
+    width: 40%;
+} */
+
+#output-body {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+
+#mid-body {
+    width: 10%;
+    text-align: center;
+    padding-top: 9vw;
+}
+
+.label {
+    text-align: left;
+    margin-left: 5%;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 20%;
+    border: 2px solid #CC6699;
+    background-color: #CC6699;
+    border-radius: 6px 6px 0px 0px;
+    color: white;
+    text-align: center;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: normal;
+}
+
+button {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    flex-wrap: nowrap;
+    /* box-shadow: 0 2px 5px 1px rgb(179, 177, 177); */
+}
+
+#btn-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5%;
+}
+
+#swap-btn {
+    width: 80%;
+    height: 0;
+    padding-top: 30%;
+    padding-bottom: 30%;
+    border: 3px solid #0191B4;
+    /* background-color: #0191B4; */
+    color: #0191B4;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+#swap-btn:hover {
+    background-color: #0191B4;
+    color: white;
+}
+
+#swap-btn:active {
+    border-color: #05718c;
+    background-color: #05718c;
+    color: lightgray;
+}
+
+#swap-btn:hover #swap-icon {
+    animation: turn 0.4s linear 1;
+}
+
+@keyframes turn {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(45deg);
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    75% {
+        transform: rotate(135deg);
+    }
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+#encode-btn {
+    border: 3px solid #6d9b12;
+    /* background-color: #0191B4; */
+    color: #6d9b12;
+    font-weight: bold;
+}
+
+#encode-btn:hover {
+    background-color: #6d9b12;
+    color: white;
+    animation: encode-rnd 0.4s linear 1;
+}
+
+#encode-btn:active {
+    border-color: #567910;
+    background-color: #567910;
+    color: lightgray;
+}
+
+#decode-btn {
+    border: 3px solid #d5bd21;
+    color: #d5bd21;
+    font-weight: bold;
+}
+
+#decode-btn:hover {
+    background-color: #d5bd21;
+    color: white;
+    animation: encode-rnd 0.4s linear 1;
+}
+
+#decode-btn:active {
+    border-color: #a7951b;
+    background-color: #a7951b;
+    color: lightgray;
+}
+
+#encode-btn:hover>span:before {
+    animation: encode-rnd 0.5s linear 1;
+}
+
+#decode-btn:hover>span:before {
+    animation: decode-rnd 0.5s linear 1;
+}
+
+#encode-btn>span:before {
+    content: "鼠鼠编码";
+}
+
+#decode-btn>span:before {
+    content: "鼠鼠解码";
+}
+
+@keyframes encode-rnd {
+    0% {
+        content: "鼠鼠3扁码";
+    }
+    25% {
+        content: "鼠鼠3扁0马";
+    }
+    50% {
+        content: "鼠臼)编0马";
+    }
+    75% {
+        content: "|*|鼠编码";
+    }
+    100% {
+        content: "鼠鼠编码";
+    }
+}
+
+@keyframes decode-rnd {
+    0% {
+        content: "鼠鼠/牟码";
+    }
+    25% {
+        content: "鼠鼠/牟6马";
+    }
+    50% {
+        content: "鼠.|.解6马";
+    }
+    75% {
+        content: "3/e鼠解码";
+    }
+    100% {
+        content: "鼠鼠解码";
+    }
+}

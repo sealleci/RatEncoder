@@ -1,0 +1,3 @@
+# RatEncoder
+
+A simple Encoder.

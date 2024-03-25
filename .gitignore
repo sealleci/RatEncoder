@@ -1,0 +1,8 @@
+node_modules
+dist
+img
+__pycache__
+py/build
+py/venv
+py/*.spec
+fonts
